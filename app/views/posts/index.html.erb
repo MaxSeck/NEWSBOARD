@@ -1,5 +1,24 @@
 <div class="container">
   <div class="header-container">
-    <h1 class="header-h1"><i class="fa-solid fa-user-secret"><i class="fa-solid fa-feather"></i></i><strong>Currently going on in your neighbourhood:</strong><i class="fa-solid fa-user-secret"></i></h1>
+    <h1 class="header-h1"><i class="fa-solid fa-mask"></i> <strong>news</strong> <i class="fa-solid fa-mask"></i></h1>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class= "main-container">
+    <div class="grid-container">
+      <div class="card-grid">
+        <% @posts.each do |post| %>
+          <%= render partial: "post-card", locals: { post: post } %>
+        <% end %>
+      </div>
+    </div>
+    <div class="map" id="map2"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
   </div>
 </div>

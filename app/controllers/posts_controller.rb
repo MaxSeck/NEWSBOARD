@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
- 
+
   def index
     if params[:query].present?
       sql_query = "description ILIKE :query OR content ILIKE :query OR address ILIKE :query"
