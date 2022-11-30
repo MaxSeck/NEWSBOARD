@@ -14,6 +14,7 @@ puts "Cleaning database..."
 
 User.destroy_all
 Post.destroy_all
+
 puts "Creating Users"
 
 user1001 = User.new({ email: "user1001@gmail.com", password: "password"})
