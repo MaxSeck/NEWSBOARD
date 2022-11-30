@@ -7,4 +7,15 @@ width: 90px;
 height: 50px;
 font-size: 30px;
 justify-content: center;
+color:  #f7f7f7;
+}
+
+// .button:hover {
+//   background-color: #393E46;
+// }
+
+.button:active {
+  background-color: #6d9886;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
