@@ -10,8 +10,8 @@ require 'faker'
 
 puts "Cleaning database..."
 
-# User.destroy_all
-# Post.destroy_all
+User.destroy_all
+Post.destroy_all
 puts "Creating Users"
 
 user1001 = User.new({ email: "markus@gmail.com", password: "password"})
@@ -26,6 +26,8 @@ user2511 = User.new({ email: "mariam@gmail.com", password: "password"})
 user2511.save!
 user6386 = User.new({ email: "chris@gmail.com", password: "password"})
 user6386.save!
+user2508 = User.new({ email: "james@gmail.com", password: "password"})
+user2508.save!
 
 
 
@@ -34,12 +36,12 @@ puts "Creating posts..."
 
 file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669729385/Newsboard/broken_mhhndo.png")
 post1 = Post.new({ title: "Destroyed playground around Friesenplatz!", user: user1001, address: "Friesenpl., 50672 Köln", content: "I saw this during my morning jogging session after carnaval! I know there's a lot of reckless behaviour during 11/11 but this is crossing the line!" })
-post1.photo.attach(io: file, filename:"photo.png", content_type: "image/png")
+post1.photo.attach(io: file, filename: "photo.png", content_type: "image/png")
 post1.save!
 
 file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669729385/Newsboard/pigeonmeme_yq4srn.jpg")
 post2 = Post.new({ title: "Military Pigeon spotted on Rudolfplatz!", user: user2511, address: "Rudolfpl., 50674 Köln", content: "I was walking past the Christmas market booths with my pals and suddenly we saw this fully armed bird landing down! It had a hemlet an a radio attached to his back. Anyone knows anything about possible military drills?" })
-post2.photo.attach(io: file, filename:"photo.png", content_type: "image/png")
+post2.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpg")
 post2.save!
 
 post3 = Post.new({ title: "Crazy Driver honking in the middle of the night at Rathenauer Platz!!!!", user: user6386, address: "Rathenaupl., 50674 Köln", content: "THERE IS A CRAZY MAN ON THE LOOSE!!!!!!!! Everynight at 3.33 am there is a red SMART with a white bus printed on it. The person drives like a maniac and wakes us up. We have a baby! He is so fast we cannot decipher the license plate. If you know him, please teill him to stop!!!"})
@@ -61,12 +63,12 @@ post10.save!
 
 puts "Creating comments..."
 # for post no.1
-comment1a = Comment.new({ content: "I tried to take my niece to play today and we couldn't! Actually pretty dangerous to let your children play there!", user: markus, post: post1})
+comment1a = Comment.new({ content: "I tried to take my niece to play today and we couldn't! Actually pretty dangerous to let your children play there!", user: user1001, post: post1})
 comment1a.save!
-comment1b = Comment.new({ content: "I will talk to my building's security guard. Our cameras are encapsulating the whole playground area, so I'm sure he must have seen something!", user: damla, post: post1})
+comment1b = Comment.new({ content: "I will talk to my building's security guard. Our cameras are encapsulating the whole playground area, so I'm sure he must have seen something!", user: user991, post: post1})
 comment1b.save!
 # for post no.2
-comment2a = Comment.new({ content: "That has been actually covered in the last Kolsh Times print. It is indeed, a new military tactics drill. ", user: max, post: post2})
+comment2a = Comment.new({ content: "That has been actually covered in the last Kolsh Times print. It is indeed, a new military tactics drill. ", user: user3011, post: post2})
 comment2a.save!
-comment2b = Comment.new({ content: "Me and my friends also saw this pigeon!", user: damla, post: post2})
+comment2b = Comment.new({ content: "Me and my friends also saw this pigeon!", user: user991, post: post2})
 comment2b.save!
