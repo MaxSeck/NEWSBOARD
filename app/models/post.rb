@@ -3,4 +3,5 @@ class Post < ApplicationRecord
   has_many :bookmarks
   has_many :votes
   has_many :comments
+  has_one_attached :photo
 end

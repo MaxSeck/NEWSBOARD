@@ -1,0 +1,16 @@
+<div class="card-post">
+  <%= link_to post_path(post) do %>
+    <% if post.photo.attached? %>
+      <%= cl_image_path post.photo.key, width: 250, height: 250, crop: :fill %>
+    <% end %>
+  <% end %>
+  <div class="card-post-infos">
+    <h2><%= link_to post_path(post) do %>
+      <%= post.address %>
+      <%= post.title %></h2>
+      <h3><%= post.user_id %></h3>
+      <h3><%= post.created_at%>
+    <% end %>
+    <h3><%= post.content%></h3>
+  </div>
+</div>
