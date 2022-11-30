@@ -18,8 +18,16 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user = current_user
-    @post.save!
-    redirect_to root_path
+    @post.save
+    redirect_to posts_path(@post)
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    return unless @post.user == current_user
+    @post.destroy
+    redirect_to posts_path status: :see_other
+
   end
 
   private
