@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="header-container">
+    <h1 class="header-h1"><i class="fa-solid fa-mask"></i> <strong>news</strong> <i class="fa-solid fa-mask"></i></h1>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class= "main-container">
+    <div class="grid-container">
+      <div class="card-grid">
+        <% @posts.each do |post| %>
+          <%= render partial: "post-card", locals: { post: post } %>
+        <% end %>
+      </div>
+    </div>
+    <div class="map" id="map2"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section class="content-item" id="comments">
+    <div class="container">
+    	<div class="row">
+            <div class="col-sm-8">
+                <form>
+                	<h3 class="pull-left">New Comment</h3>
+                	<button type="submit" class="btn btn-normal pull-right">Submit</button>
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-sm-3 col-lg-2 hidden-xs">
+                            	<img class="img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
+                                <textarea class="form-control" id="message" placeholder="Your message" required=""></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <h3><%= @users.count %> Comments</h3>
+                <% @users.each do |user| %>
+                  <%= render "/posts/comment", user: user %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</section>
+
+

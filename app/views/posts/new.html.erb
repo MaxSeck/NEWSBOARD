@@ -1,0 +1,14 @@
+<div class=container>
+<div class="header-container">
+  <h1 class="header-h1"><strong>Create A New Post</strong></h1>
+</div>
+<div class="new-form-container">
+  <%= simple_form_for [@post] do |f|  %>
+    <%= f.input :title, placeholder: "Please choose a title for your post" %>
+    <%= f.input :content, placeholder: "Tell us what's on your mind" %>
+    <%= f.input :address, placeholder: "Street, Address, City" %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit class: "btn-flat" %>
+  <% end %>
+  </div>
+</div>
