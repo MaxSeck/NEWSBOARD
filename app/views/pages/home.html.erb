@@ -1,7 +1,12 @@
+<div class="container">
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 
-<div style="width: 100%; height: 600px;"
+<div style="width: 100%; height: 500px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY=pk.eyJ1IjoibWF4d2VsbHMiLCJhIjoiY2xhdjAwN2NrMDB0NjNxbGlsM2VxdXo2ZiJ9.oCwf8MZHr7DcP-_nMtZ94w'] %>"></div>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
+<button type="button" class="button">GO</button>
+</div>
