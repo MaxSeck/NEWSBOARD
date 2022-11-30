@@ -24,6 +24,7 @@ class PostsController < ApplicationController
     return unless @post.user == current_user
     @post.destroy
     redirect_to posts_path status: :see_other
+
   end
 
   private
