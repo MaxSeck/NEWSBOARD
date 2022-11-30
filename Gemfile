@@ -5,8 +5,6 @@ ruby "3.1.2"
 gem "faker"
 gem "geocoder"
 
-gem "geocoder"
-
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 

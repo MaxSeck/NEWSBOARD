@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
 
   def index
+    @users = User.all
+
     if params[:query].present?
       sql_query = "description ILIKE :query OR content ILIKE :query OR address ILIKE :query"
       @posts = Post.where(sql_query, query: "%#{params[:query]}%")
