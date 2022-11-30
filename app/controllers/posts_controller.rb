@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+ 
   def index
     @users = User.all
 
@@ -24,6 +25,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:content, :address, :title)
+    params.require(:post).permit(:content, :address, :title, :photo)
   end
 end
