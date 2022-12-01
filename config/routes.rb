@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get "votes/new"
-  get "votes/create"
+  put "post/:id/vote", to: "posts#vote", as: "vote"
+
+
   devise_for :users
   root to: "pages#home"
 
