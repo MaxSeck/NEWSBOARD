@@ -1,15 +1,20 @@
+  <div class="d-flex">
 <div class="header-container">
-  <div class="d-flex justify-content-center">
-    <%= cl_image_tag @post.photo.key, width: 300, height: 300, crop: :fill, class:"me-3 rounded" %>
-    <hr>
-    <div class="text-start">
+    <div class="card-post">
       <h1 style="color:#ff66c4"><%= @post.title %></h1>
+      <% if @post.photo.attached? %>  
+      <%= cl_image_tag @post.photo.key, width: 300, height: 300, crop: :fill, class:"me-3 rounded" %>
+      <% else %>
+      <% end %>
+        <p style="color:black"><%= @post.content %></p>
+    </div>
+    <hr>
+    <div class="text-center card-post">
       <% @post.comments.each do |comment| %>
         <p><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
         <p><strong><%= comment.user.email %></strong></p>
         <p><%= comment.content %></p>
       <% end %>
-      <p style="color:black"><%= @post.content %></p>
       <br>
       <br>
       <br>

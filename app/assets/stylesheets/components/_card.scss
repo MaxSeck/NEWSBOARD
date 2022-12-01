@@ -5,7 +5,7 @@
   color: #393E46;
 }
 
-.card-dev {
+.card-post {
   overflow: hidden;
   height: 120px;
   background: white;
@@ -17,24 +17,24 @@
   text-decoration: none !important;
 }
 
-.card-dev img {
+.card-post img {
   height: 100%;
   width: 120px;
   object-fit: cover;
 }
 
-.card-dev h2 {
+.card-post h2 {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
 
 }
 
-.card-dev h3 {
+.card-post h3 {
   font-size: 16px;
 }
 
-.card-dev p {
+.card-post p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
@@ -42,7 +42,7 @@
   margin-top: 8px;
 }
 
-.card-dev .card-dev-infos {
+.card-post .card-post-infos {
   padding: 16px;
 }
 
