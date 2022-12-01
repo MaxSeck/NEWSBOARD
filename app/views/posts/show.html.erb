@@ -21,3 +21,11 @@
     </div>
   </div>
 </div>
+
+<% if current_user == @post.user %>
+  <%= link_to "Delete",
+    post_path(@post)
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+<% end %>
+

@@ -10,10 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
+@import "pages/home";
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
-
-body{margin-top:20px;}
 
 .content-item {
     padding:30px 0;
