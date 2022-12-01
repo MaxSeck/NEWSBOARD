@@ -1,49 +1,63 @@
 .card-grid {
-  display: grid;
+  display: column;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   color: #393E46;
+  padding: 0;
+  margin: 0;
 }
 
-.card-dev {
+.card-post {
   overflow: hidden;
-  height: 120px;
+  height: 160px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
+  // align-items: center;
   margin-bottom: 10px;
   color: #393E46;
   text-decoration: none !important;
 }
 
-.card-dev img {
+.card-post img {
   height: 100%;
   width: 120px;
   object-fit: cover;
 }
 
-.card-dev h2 {
+.card-post h2 {
   font-size: 20px;
   font-weight: bold;
   margin: 0;
 
 }
 
-.card-dev h3 {
+.card-post h3 {
   font-size: 16px;
 }
 
-.card-dev p {
+.card-content {
+  font-size: 18px;
+  line-height: 1.4;
+  opacity: .7;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-date {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
-.card-dev .card-dev-infos {
-  padding: 16px;
+
+.card-post .card-post-infos {
+  padding: 0px 8px 0px 8px ;
 }
 
 
@@ -72,12 +86,12 @@
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+
+  margin-top: 4px;
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 0px;
 }
 
 .container {

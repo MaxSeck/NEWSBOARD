@@ -1,13 +1,17 @@
 <div class="card-post">
   <div class="card-post-infos">
     <h2><%= link_to post_path(post) do %>
-      <h3><%= post.created_at.strftime("%m-%e-%y %H:%M")%>
-      <h3><%= post.user.email %></h3>
-      <%= post.title %></h2>
-      <h3><%= post.content%></h3>
-      <p>votes<%= post.votes.count %></p>
-      <p>com<%= post.comments.count %></p>
-      <p>bm<%= post.bookmarks.count %></p>
+      <div class="d-flex justify-content-between">
+        <p class="card-date"><%= post.created_at.strftime("%Y-%m-%e %H:%M")%></p>
+        <p class="card-date"><%= post.user.email %></p>
+      </div>
+      <h2><%= post.title %></h2>
+      <p class="card-content"><%= post.content%></p>
+      <div class="d-flex justify-content-end">
+        <p class="card-content">votes<%= post.votes.count %></p>
+        <p class="card-content">com<%= post.comments.count %></p>
+        <p class="card-content">bm<%= post.bookmarks.count %></p>
+      </div>
     <% end %>
   </div>
 </div>
