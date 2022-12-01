@@ -1,16 +1,13 @@
 <div class="card-post">
-  <%= link_to post_path(post) do %>
-    <% if post.photo.attached? %>
-      <%= cl_image_path post.photo.key, width: 250, height: 250, crop: :fill %>
-    <% end %>
-  <% end %>
   <div class="card-post-infos">
     <h2><%= link_to post_path(post) do %>
-      <%= post.address %>
+      <h3><%= post.created_at.strftime("%m-%e-%y %H:%M")%>
+      <h3><%= post.user.email %></h3>
       <%= post.title %></h2>
-      <h3><%= post.user_id %></h3>
-      <h3><%= post.created_at%>
+      <h3><%= post.content%></h3>
+      <p>votes<%= post.votes.count %></p>
+      <p>com<%= post.comments.count %></p>
+      <p>bm<%= post.bookmarks.count %></p>
     <% end %>
-    <h3><%= post.content%></h3>
   </div>
 </div>
