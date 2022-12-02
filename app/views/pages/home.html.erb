@@ -6,6 +6,9 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
-<button type="button" class="button" style="margin-bottom: 0px;margin-left: 140px;margin-top: 30px;">GO</button>
+<div>
+<%= link_to posts_path do %>
+<button type="button" class="button" style="margin-bottom: 0px;margin-left: 130px;margin-top: 30px;width: 106px;">News</button>
+ <% end %>
+</div>
 </div>
