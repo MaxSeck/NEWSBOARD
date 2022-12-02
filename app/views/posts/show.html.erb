@@ -1,32 +1,19 @@
-
 <div class="header-container">
   <div class="d-flex justify-content-center">
     <%= cl_image_tag @post.photo.key, width: 300, height: 300, crop: :fill, class:"me-3 rounded" %>
     <hr>
     <div class="text-start">
       <h1 style="color:#ff66c4"><%= @post.title %></h1>
-      <p style="color:black"><strong>Speciality:</strong> <%= @post.content %></p>
-      <p style="color:black"><strong>gitHub: </strong><%= link_to @dev.github_link %></p>
-      <p style="color:black"><strong>Experience:</strong> <%= @dev.skills %></p>
-      <h3><strong>Rate: </strong><%= @dev.price %> $/hr</h3>
+      <% @post.comments.each do |comment| %>
+        <p><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
+        <p><strong><%= comment.user.email %></strong></p>
+        <p><%= comment.content %></p>
+      <% end %>
+      <p style="color:black"><%= @post.content %></p>
       <br>
-      <%= link_to "Book now", new_dev_job_path(@dev), class: "btn-flat"%>
       <br>
       <br>
     </div>
-  </div>
-  <div class="mt-3">
-    <h3>Reviews</h3>
-      <div class="cards">
-          <% @dev.reviews.each do |review| %>
-            <div class="card-product">y
-              <div class="card-product-infos">
-                <h3><%= review.rating %></h3>
-                <p class= "text"><%= review.comment %></p>
-              </div>
-            </div>
-          <% end %>
-      </div>
   </div>
 </div>
 
@@ -36,4 +23,3 @@
     data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
 <% end %>
-

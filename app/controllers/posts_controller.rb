@@ -15,6 +15,10 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def create
     @post = Post.new(post_params)
     @post.user = current_user
@@ -27,7 +31,12 @@ class PostsController < ApplicationController
     return unless @post.user == current_user
     @post.destroy
     redirect_to posts_path status: :see_other
+  end
 
+  def vote
+    @post = Post.all.find(params[:id])
+    Vote.create(user_id: current_user.id, post_id: @post.id)
+    redirect_to post_path(@post)
   end
 
   private

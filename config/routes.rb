@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get "votes/new"
-  get "votes/create"
+  put "post/:id/vote", to: "posts#vote", as: "vote"
+
+
   devise_for :users
   root to: "pages#home"
 
@@ -9,7 +10,9 @@ Rails.application.routes.draw do
 
 
 
-  resources :posts, only: [:index, :show, :new, :create, :destroy]
+  resources :posts, only: [:index, :show, :new, :create, :destroy] do
+    resources :comments, only: [:index, :show, :new, :create, :destroy]
+  end
 
 end
 

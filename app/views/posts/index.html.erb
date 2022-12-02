@@ -1,7 +1,11 @@
 <div class="container">
   <div class="header-container">
-    <h1 class="header-h1"><i class="fa-solid fa-mask"></i> <strong>news</strong> <i class="fa-solid fa-mask"></i></h1>
+    <h1 class="header-h1"><strong>News</strong></h1>
   </div>
+<div style="width: 100%; height: 500px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 <br>
 <div class="container">
@@ -13,17 +17,8 @@
         <% end %>
       </div>
     </div>
-    <div class="map" id="map2"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
-      </div>
-    </div>
   </div>
 </div>
-
-
 <section class="content-item" id="comments">
     <div class="container">
     	<div class="row">
@@ -42,11 +37,6 @@
                         </div>
                     </fieldset>
                 </form>
-
-                <h3><%= @users.count %> Comments</h3>
-                <% @users.each do |user| %>
-                  <%= render "/posts/comment", user: user %>
-                <% end %>
             </div>
         </div>
     </div>
