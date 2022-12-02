@@ -1,5 +1,5 @@
 <div class="show-container">
-  <% if @post.photo.attached? %>  
+  <% if @post.photo.attached? %>
     <div class="text-center">
       <%= cl_image_tag @post.photo.key, height: 250, class:"rounded w-100" %>
       </div>
@@ -42,3 +42,4 @@
     </div>
   </div>
 </div>
+

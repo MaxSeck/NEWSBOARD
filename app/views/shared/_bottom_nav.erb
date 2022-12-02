@@ -7,7 +7,12 @@
       <%= image_tag "add.jpg", style: 'height:30px; width:30px;' %>
        <% end %>
 
+
+      <% if user_signed_in? %>
+
       <%= link_to user_path(current_user) do %>
       <%= image_tag "profile.jpg", style: 'height:30px; width:30px;' %>
       <% end %>
+      <% end %>
+
 </div>
