@@ -1,0 +1,16 @@
+<div class="container">
+
+<div class="text-center" style="padding-top: 50px;" ><%= image_tag "profile" %></div>
+<br>
+<h2 class="text-center">Your Posts</h2>
+
+<ul class="list-group">
+  <% @user.posts.each do |post| %>
+    <li class="list-group-item">
+    <%= post.title %>
+    <%= post.content %>
+    <%= post.address %>
+    </li>
+  <% end %>
+</ul>
+</div>

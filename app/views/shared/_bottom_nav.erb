@@ -1,10 +1,13 @@
-<div class="d-flex justify-content-around" style="padding-top: 30px;padding-bottom: 30px; background-color: #6D9886">
+<div class="d-flex justify-content-around" style="padding-top: 30px;padding-bottom:
+    30px; background-color: #6D9886">
 
-      <%= image_tag "bookmark", style: 'height:30px; width:30px;'%>
+      <%= image_tag "bookmark.jpg", style: 'height:30px; width:30px;'%>
 
       <%= link_to posts_new_path do %>
-      <%= image_tag "add", style: 'height:30px; width:30px;' %>
+      <%= image_tag "add.jpg", style: 'height:30px; width:30px;' %>
        <% end %>
 
-      <%= image_tag "profile", style: 'height:30px; width:30px;' %>
+      <%= link_to user_path(current_user) do %>
+      <%= image_tag "profile.jpg", style: 'height:30px; width:30px;' %>
+      <% end %>
 </div>
