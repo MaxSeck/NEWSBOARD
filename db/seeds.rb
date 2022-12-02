@@ -62,7 +62,7 @@ post2 = Post.new({ title: "Military Pigeon spotted on Rudolfplatz!", user: user2
 post2.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpg")
 post2.save!
 file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669815002/Newsboard/Grannie_s_Coffee_1_iogfnd.png")
-post3 = Post.new({ title: "Crazy Driver honking in the middle of the night at Rathenauer Platz!!!!", user: user6386, address: "Rathenaupl., 50674 Köln", content: "THERE IS A CRAZY MAN ON THE LOOSE!!!!!!!! Everynight at 3.33 am there is a red SMART with a white bus printed on it. The person drives like a maniac and wakes us up with their stupid honking. We have a baby! He is so fast we cannot decipher the license plate. If you know him, please teill him to stop!!!"})
+post3 = Post.new({ title: "Crazy Driver honking in the middle of the night at Rathenauer Platz!!!!", user: user6386, address: "Rathenaupl., 50674 Köln", content: "THERE IS A CRAZY MAN ON THE LOOSE!!!!!!!! Everynight at 3.33 am there is a red SMART with a white bus printed on it. The person drives like a maniac and wakes us up with their stupid honking. We have a baby! He is so fast we cannot decipher the license plate. If you know him, please tell him to stop!!!"})
 post3.photo.attach(io: file, filename:"photo.png", content_type: "image/png")
 post3.save!
 post4 = Post.new({ title: "Free Hugs at Kölner Dom", user: user6386, address: "Domplatte, 50667 Köln", content: "everybody needs a hug from time to time. You can get a hug right in front of the entry gate! #healtheworld"})
@@ -79,6 +79,7 @@ post8.photo.attach(io: file, filename:"photo.pgn", content_type: "image.png")
 post8.save!
 file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669815002/Newsboard/Grannie_s_Coffee_zvzcqo.png")
 post9 = Post.new({ title: "Grand Opening of new cafe ☕️", user: user2589, address: "Ehrenstraße 25, Köln", content: "Tomorrow is the grand opening of a cafe that is run by seniors with their own non-profit. All proceeds go to seniors who cannot with low pensions. Do good, eat good and enjoy the best cakes in town! :) "})
+post9.photo.attach(io: file, filename:"photo.pgn", content_type: "image.png")
 post9.save!
 post10 = Post.new({ title: "Keys found 🔑", user: user2589, address: "Hohenzollernring 26, Köln", content: "I found a key with a bright pink zipper lanyard in front of REWE. I dropped it off at the city lost and found."})
 post10.save!
@@ -219,9 +220,9 @@ comment9e = Comment.new({ content: "I cannot go. I am allergic to gluten, sugar 
 comment9e.save!
 comment9f = Comment.new({ content: "We don't want Hipster Stuff in our neighbourhood! Get out!!!!!!!!", user: user33, post: post9})
 comment9f.save!
-comment9g = Comment.new({ content: "My friend's grandma will be baking Schwarzwälder Kirsch for them. I guarantee it is the BEST SCHWARZWÄLDER KIRSCH IN THE WORLDDDDD!!!!!!", user: user33, post: post9})
+comment9g = Comment.new({ content: "My friend's grandma will be baking Schwarzwälder Kirsch for them. I guarantee it is the BEST SCHWARZWÄLDER KIRSCH IN THE WORLDDDDD!!!!!!", user: user112, post: post9})
 comment9g.save!
-comment9h = Comment.new({ content: "Is it dog friendly?", user: user33, post: post9})
+comment9h = Comment.new({ content: "Is it dog friendly?", user: user2508, post: post9})
 comment9h.save!
 # for no.10
 comment10a = Comment.new({ content: "Thank you! I picked them up today 👩🏼‍💻", user: user991, post: post10})
