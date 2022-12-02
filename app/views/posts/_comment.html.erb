@@ -2,7 +2,7 @@
   <% @comments.post.each do |comment|  %>
     <div class="media-body">
       <h4 class="media-heading"><%= comment.user.email %></h4>
-      <p><%= comment.content %></p>
+      <p class="text-center"><%= comment.content %></p>
       <ul class="list-unstyled list-inline media-detail pull-left">
           <li><i class="fa fa-calendar"></i>27/02/2014</li>
           <li><i class="fa fa-thumbs-up"></i>13</li>
