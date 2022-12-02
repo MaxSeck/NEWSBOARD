@@ -1,10 +1,12 @@
 <div class="container">
+  <div class="header-container">
+    <h1 class="header-h1"><strong>News</strong></h1>
+  </div>
 <div style="width: 100%; height: 500px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-
 <br>
 <div class="container">
   <div class= "main-container">
@@ -17,3 +19,27 @@
     </div>
   </div>
 </div>
+<section class="content-item" id="comments">
+    <div class="container">
+    	<div class="row">
+            <div class="col-sm-8">
+                <form>
+                	<h3 class="pull-left">New Comment</h3>
+                	<button type="submit" class="btn btn-normal pull-right">Submit</button>
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-sm-3 col-lg-2 hidden-xs">
+                            	<img class="img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-9 col-lg-10">
+                                <textarea class="form-control" id="message" placeholder="Your message" required=""></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
