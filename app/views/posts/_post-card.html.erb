@@ -1,3 +1,13 @@
+
+<div class="container">
+
+<div class="text-center" style="padding-top: 50px;" ><%= image_tag "profile" %></div>
+<br>
+<h2 class="text-center">Your Posts</h2>
+
+
+  <% @user.posts.each do |post| %>
+
 <div class="card-post">
   <div class="card-post-infos">
     <%= link_to post_path(post) do %>
@@ -6,7 +16,7 @@
         <p class="card-date"><%= post.user.email %></p>
       </div>
       <h2><%= post.title %></h2>
-      <p class="card-content"><%= post.content%></p>
+      <p class="card-content line-clamp"><%= post.content%></p>
       <div class="card-content-container">
           <p class="card-content"><i class="fa-solid fa-heart"></i><%= post.votes.count %></p>
           <p class="card-content"><i class="fa-solid fa-comment"></i><%= post.comments.count %></p>
@@ -14,4 +24,9 @@
       </div>
     <% end %>
   </div>
+</div>
+
+
+  <% end %>
+
 </div>
