@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
 
   def index
-    @users = User.all
 
+    @users = User.all
     if params[:query].present?
       sql_query = "description ILIKE :query OR content ILIKE :query OR address ILIKE :query"
       @posts = Post.where(sql_query, query: "%#{params[:query]}%")
     else
-      @posts = Post.all
+      @posts = Post.all.order('posts.created_at DESC')
     end
   end
 
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     @post.save
-    redirect_to posts_path(@post)
+    redirect_to post_path(@post)
   end
 
   def destroy

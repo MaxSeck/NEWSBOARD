@@ -61,7 +61,7 @@ file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669729385/N
 post2 = Post.new({ title: "Military Pigeon spotted on Rudolfplatz!", user: user2511, address: "Rudolfpl., 50674 Köln", content: "I was walking past the Christmas market booths with my pals and suddenly we saw this fully armed bird landing down! It had a hemlet an a radio attached to his back. Anyone knows anything about possible military drills?" })
 post2.photo.attach(io: file, filename: "photo.jpg", content_type: "image/jpg")
 post2.save!
-file = URI.open("https://assets.smart.mercedes-benz.com/styles/smart_large/s3/2020-01/smart-EQ-models-pulse_0.jpg?VersionId=TgXCKKi6xyOSsp9RTdidILgD8DP4rU11&h=9b8bd6ff&width=2720")
+file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669815002/Newsboard/Grannie_s_Coffee_1_iogfnd.png")
 post3 = Post.new({ title: "Crazy Driver honking in the middle of the night at Rathenauer Platz!!!!", user: user6386, address: "Rathenaupl., 50674 Köln", content: "THERE IS A CRAZY MAN ON THE LOOSE!!!!!!!! Everynight at 3.33 am there is a red SMART with a white bus printed on it. The person drives like a maniac and wakes us up with their stupid honking. We have a baby! He is so fast we cannot decipher the license plate. If you know him, please teill him to stop!!!"})
 post3.photo.attach(io: file, filename:"photo.png", content_type: "image/png")
 post3.save!
@@ -78,7 +78,7 @@ post8 = Post.new({ title: "Help out the homeless :)", user: user6386, address: "
 post8.photo.attach(io: file, filename:"photo.pgn", content_type: "image.png")
 post8.save!
 file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669815002/Newsboard/Grannie_s_Coffee_zvzcqo.png")
-post9 = Post.new({ title: "Grand Opening of new cafe ☕️", user: user2589, address: "Ehrenstraße 25, Köln", content: "Tomorrow is the grand opening of a cafe that is run by seniors with their own non-profit. All proceeds go to senior who cannot with low pensions. Do good, eat good and enjoy the best cakes in town! :) "})
+post9 = Post.new({ title: "Grand Opening of new cafe ☕️", user: user2589, address: "Ehrenstraße 25, Köln", content: "Tomorrow is the grand opening of a cafe that is run by seniors with their own non-profit. All proceeds go to seniors who cannot with low pensions. Do good, eat good and enjoy the best cakes in town! :) "})
 post9.save!
 post10 = Post.new({ title: "Keys found 🔑", user: user2589, address: "Hohenzollernring 26, Köln", content: "I found a key with a bright pink zipper lanyard in front of REWE. I dropped it off at the city lost and found."})
 post10.save!
@@ -219,7 +219,7 @@ comment9e = Comment.new({ content: "I cannot go. I am allergic to gluten, sugar 
 comment9e.save!
 comment9f = Comment.new({ content: "We don't want Hipster Stuff in our neighbourhood! Get out!!!!!!!!", user: user33, post: post9})
 comment9f.save!
-comment9g = Comment.new({ content: "My friend's nan will be baking Schwarzwälder Kirsch for them. I guarantee it is the BEST SCHWARZWÄLDER KIRSCH IN THE WORLDDDDD!!!!!!", user: user33, post: post9})
+comment9g = Comment.new({ content: "My friend's grandma will be baking Schwarzwälder Kirsch for them. I guarantee it is the BEST SCHWARZWÄLDER KIRSCH IN THE WORLDDDDD!!!!!!", user: user33, post: post9})
 comment9g.save!
 comment9h = Comment.new({ content: "Is it dog friendly?", user: user33, post: post9})
 comment9h.save!
