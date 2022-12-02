@@ -1,34 +1,43 @@
-<div class="d-flex">
-  <div class="header-container">
-    <div class="show-card color=#F2E7D5">
-      <h1 style="color:#393E46"><%= @post.title %></h1>
-      <% if @post.photo.attached? %>  
-      <%= cl_image_tag @post.photo.key, width: 300, height: 300, crop: :fit, class:"me-3 rounded" %>
-      <% else %>
-      <% end %>
-        <p style="color:black"><%= @post.content %></p>
+<div class="show-container">
+  <% if @post.photo.attached? %>  
+    <div class="text-center">
+      <%= cl_image_tag @post.photo.key, height: 250, class:"rounded w-100" %>
+      </div>
+  <% end %>
+  <div class="container">
+    <div class="d-flex f justify-space-between w-100 mt-3">
+      <p class="flex-grow-1"><%= @post.created_at.strftime("%m-%e-%y %H:%M")%></p>
+      <p><strong><%= @post.user.email %></strong></p>
     </div>
-  </div>
-  <br>
-  <br>
-</div>
-  <div class="d-flex">
-    <div class="text-center comment-card">
+    <hr>
+    <div class="show-card">
+      <h1><%= @post.title %></h1>
+      <p><%= @post.content %></p>
+    </div>
+    <hr>
+    <div class="show-post-icons">
+      <div class="d-flex align-items-center">
+        <p class="show-post-icon-content"><i class="fa-solid fa-heart"></i><strong><%= @post.votes.count %></strong></p>
+      </div>
+      <div class="d-flex align-items-center mx-3">
+        <p class="show-post-icon-content"><i class="fa-solid fa-comment"><strong></i><%= @post.comments.count %></strong></p>
+      </div>
+      <div class="d-flex align-items-center">
+        <p class="show-post-icon-content"><i class="fa-solid fa-bookmark"><strong></i><%= @post.bookmarks.count %></strong></p>
+      </div>
+    </div>
+
+    <div class="comment-card">
       <% @post.comments.each do |comment| %>
-        <div class="flex-direction:row">
-        <p><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
-        <p><strong><%= comment.user.email %></strong></p>
-        <p><%= comment.content %></p>
-        <hr>
+        <div class="d-flex justify-space-between w-100">
+          <p class="flex-grow-1"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
+          <p><strong><%= comment.user.email %></strong></p>
+        </div>
+        <div class="comment-content">
+          <p><%= comment.content %></p>
+          <br>
+        </div>
       <% end %>
     </div>
   </div>
 </div>
-
-<% if current_user == @post.user %>
-  <%= link_to "Delete",
-    post_path(@post)
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-  %>
-<% end %>
-

@@ -1,8 +1,18 @@
 .comment-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  text-align: center;
-  background: #f2e7d5;
+  background:#F7F7F7;
   border-radius: 5px;
+  padding: 10px;
+  opacity: 0.9;
+  margin: 10px 0px;
 }
+
+.comment-content {
+  border-bottom: 1px solid $darkgrey;
+  margin-bottom: 20px;
+}
+
+.comment-content:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+}
+
