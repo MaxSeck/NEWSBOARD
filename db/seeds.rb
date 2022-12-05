@@ -19,35 +19,35 @@ puts "Cleaning database..."
 
 puts "Creating Users"
 
-user1001 = User.new({ email: "user1001@gmail.com", password: "password"})
+user1001 = User.new({ email: "user1001@gmail.com", password: "password", username: "user1001"})
 user1001.save!
-user3011 = User.new({ email: "user3011@gmail.com", password: "password"})
+user3011 = User.new({ email: "user3011@gmail.com", password: "password", username: "user3011"})
 user3011.save!
-user991 = User.new({ email: "user991@gmail.com", password: "password"})
+user991 = User.new({ email: "user991@gmail.com", password: "password", username: "user991"})
 user991.save!
-user2508 = User.new({ email: "user2508@gmail.com", password: "password"})
+user2508 = User.new({ email: "user2508@gmail.com", password: "password", username: "user2508"})
 user2508.save!
-user2589 = User.new({ email: "user2589@gmail.com", password: "password"})
+user2589 = User.new({ email: "user2589@gmail.com", password: "password", username: "user2589"})
 user2589.save!
-user2511 = User.new({ email: "user2511@gmail.com", password: "password"})
+user2511 = User.new({ email: "user2511@gmail.com", password: "password", username: "user2511"})
 user2511.save!
-user6386 = User.new({ email: "user6386@gmail.com", password: "password"})
+user6386 = User.new({ email: "user6386@gmail.com", password: "password", username: "user6386"})
 user6386.save!
-user663 = User.new({ email: "user663@gmail.com", password: "password"})
+user663 = User.new({ email: "user663@gmail.com", password: "password", username: "user663"})
 user663.save!
-user2051 = User.new({ email: "user2051@gmail.com", password: "password"})
+user2051 = User.new({ email: "user2051@gmail.com", password: "password", username: "user2051"})
 user2051.save!
-user499 = User.new({ email: "user499@gmail.com", password: "password"})
+user499 = User.new({ email: "user499@gmail.com", password: "password", username: "user499"})
 user499.save!
-user3125 = User.new({ email: "user3125@gmail.com", password: "password"})
+user3125 = User.new({ email: "user3125@gmail.com", password: "password", username: "user3125"})
 user3125.save!
-user33 = User.new({ email: "user33@gmail.com", password: "password"})
+user33 = User.new({ email: "user33@gmail.com", password: "password", username: "user33"})
 user33.save!
-user112 = User.new({ email: "user112@gmail.com", password: "password"})
+user112 = User.new({ email: "user112@gmail.com", password: "password", username: "user112"})
 user112.save!
-user678 = User.new({ email: "user678@gmail.com", password: "password"})
+user678 = User.new({ email: "user678@gmail.com", password: "password", username: "user678"})
 user678.save!
-user222 = User.new({ email: "user222@gmail.com", password: "password"})
+user222 = User.new({ email: "user222@gmail.com", password: "password", username: "user222"})
 user222.save!
 
 puts "Creating posts..."
