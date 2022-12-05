@@ -27,8 +27,10 @@
       </div>
     </div>
 
+    <%= render 'comment-form' %>
+
     <div class="comment-card">
-      <% @post.comments.each do |comment| %>
+      <% @post.comments.reverse.each do |comment| %>
         <div class="d-flex justify-space-between w-100">
           <p class="flex-grow-1"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
           <p><strong><%= comment.user.email %></strong></p>
@@ -42,4 +44,3 @@
     </div>
   </div>
 </div>
-
