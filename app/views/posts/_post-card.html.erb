@@ -1,27 +1,19 @@
-
-
-
-  <%# @user.posts.each do |post| %>
-
+<%# @user.posts.each do |post| %>
 <div class="card-post">
   <div class="card-post-infos">
+    <div class="d-flex justify-content-between">
+      <p class="card-date"><%= post.created_at.strftime("%Y-%m-%e %H:%M")%></p>
+      <p class="card-date"><%= post.user.email %></p>
+    </div>
     <%= link_to post_path(post) do %>
-      <div class="d-flex justify-content-between">
-        <p class="card-date"><%= post.created_at.strftime("%Y-%m-%e %H:%M")%></p>
-        <p class="card-date"><%= post.user.email %></p>
-      </div>
       <h2><%= post.title %></h2>
       <p class="card-content line-clamp"><%= post.content%></p>
-      <div class="card-content-container">
-          <p class="card-content"><i class="fa-solid fa-heart"></i><%= post.votes.count %></p>
-          <p class="card-content"><i class="fa-solid fa-comment"></i><%= post.comments.count %></p>
-          <p class="card-content"><i class="fa-solid fa-bookmark"></i><%= post.bookmarks.count %></p>
-      </div>
     <% end %>
+    <div class="card-content-container">
+        <p class="card-content"><i class="fa-solid fa-heart"></i><%= post.votes.count %></p>
+        <p class="card-content"><i class="fa-solid fa-comment"></i><%= post.comments.count %></p>
+        <p class="card-content"><i class="fa-solid fa-bookmark"></i><%= post.bookmarks.count %></p>
+    </div>
   </div>
 </div>
-
-
   <%# end %>
-
-
