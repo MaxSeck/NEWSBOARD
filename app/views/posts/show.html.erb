@@ -17,7 +17,9 @@
     <hr>
     <div class="show-post-icons">
       <div class="d-flex align-items-center">
-        <p class="show-post-icon-content"><i class="fa-solid fa-heart"></i><strong><%= @post.votes.count %></strong></p>
+        <%= button_to vote_post_path(@post), method: :patch do %>
+          <p class="show-post-icon-content"><i class="fa-solid fa-heart"></i><strong><%= @post.votes.count %></strong></p>
+        <% end %>
       </div>
       <div class="d-flex align-items-center mx-3">
         <p class="show-post-icon-content"><i class="fa-solid fa-comment"><strong></i><%= @post.comments.count %></strong></p>
@@ -42,4 +44,3 @@
     </div>
   </div>
 </div>
-
