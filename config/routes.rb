@@ -6,13 +6,17 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get "posts/new", to: "posts#new"
-  post "posts", to: "posts#create"
 
-
+  resources :posts, only: [:show] do
+    # resources :votes
+    patch :vote, on: :member
+  end
 
   resources :users, only: [:show]
   resources :posts, only: [:index, :show, :new, :create, :destroy] do
+
     resources :comments, only: [:create]
+ 
   end
 end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
