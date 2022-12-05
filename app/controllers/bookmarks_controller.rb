@@ -1,9 +1,7 @@
 class BookmarksController < ApplicationController
-  def show
-    @bookmark = Bookmark.new
-  end
 
   def index
-    @bookmarks = current_user.bookmarks
+    @bookmarks = current_user.bookmarks #array of bookmark objects
+    @posts = @bookmarks.map {|bookmark| bookmark.post}
   end
 end
