@@ -8,4 +8,12 @@ class User < ApplicationRecord
   has_many :posts
   has_many :bookmarks
   has_many :votes
+
+  after_create :set_username
+
+  private
+    def set_username
+       self.username = "user-#{SecureRandom.hex(2)}"
+       self.save!
+    end
 end

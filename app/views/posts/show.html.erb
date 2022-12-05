@@ -7,7 +7,7 @@
   <div class="container">
     <div class="d-flex f justify-space-between w-100 mt-3">
       <p class="flex-grow-1"><%= @post.created_at.strftime("%m-%e-%y %H:%M")%></p>
-      <p><strong><%= @post.user.email %></strong></p>
+      <p><strong><%= @post.user.username %></strong></p>
     </div>
     <hr>
     <div class="show-card">
@@ -33,7 +33,7 @@
       <% @post.comments.reverse.each do |comment| %>
         <div class="d-flex justify-space-between w-100">
           <p class="flex-grow-1"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
-          <p><strong><%= comment.user.email %></strong></p>
+          <p><strong><%= comment.user.username %></strong></p>
         </div>
         <div class="comment-content">
           <p><%= comment.content %></p>
