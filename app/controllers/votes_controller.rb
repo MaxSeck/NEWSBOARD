@@ -1,24 +1,24 @@
 class VotesController < ApplicationController
-  def new
-    @post = Post.find(params[:post_id])
-    @vote = Vote.new
-  end
 
-  def create
-    @post = Post.find(params[:post_id])
-    @vote = Vote.new(vote_params)
-    @vote.post = @post
-    @vote.save!
-    redirect_to root_path
-  end
+  before_action :find_post
 
-  def index
-    @votes = current_user.votes
-  end
+  # def create
+  #   if already_voted?
+  #     flash[:notice] = "You can't vote more than once"
+  #   else
+  #     Vote.create(post: @post, user: current_user)
+  #   end
+  #   redirect_to post_path(@post)
+  # end
 
-  private
+  # def already_voted?
+  #   Vote.where(user_id: current_user.id, post_id:
+  #   params[:post_id]).exists?
+  # end
 
-  def votes_params
-    params.require(:vote).permit(:user_id, :post_id)
-  end
+  # private
+
+#   def find_post
+#     @post = Post.find(params[:post_id])
+#   end
 end

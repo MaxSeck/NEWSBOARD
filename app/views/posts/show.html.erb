@@ -17,7 +17,9 @@
     <hr>
     <div class="show-post-icons">
       <div class="d-flex align-items-center">
-        <p class="show-post-icon-content"><i class="fa-solid fa-heart"></i><strong><%= @post.votes.count %></strong></p>
+        <%= button_to vote_post_path(@post), method: :patch do %>
+          <p class="show-post-icon-content"><i class="fa-solid fa-heart"></i><strong><%= @post.votes.count %></strong></p>
+        <% end %>
       </div>
       <div class="d-flex align-items-center mx-3">
         <p class="show-post-icon-content"><i class="fa-solid fa-comment"><strong></i><%= @post.comments.count %></strong></p>
@@ -27,8 +29,10 @@
       </div>
     </div>
 
+    <%= render 'comment-form' %>
+
     <div class="comment-card">
-      <% @post.comments.each do |comment| %>
+      <% @post.comments.reverse.each do |comment| %>
         <div class="d-flex justify-space-between w-100">
           <p class="flex-grow-1"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
           <p><strong><%= comment.user.email %></strong></p>
@@ -42,4 +46,3 @@
     </div>
   </div>
 </div>
-
