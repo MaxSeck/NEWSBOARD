@@ -41,6 +41,15 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
 
+  def bookmark
+    @post = Post.all.find(params[:id])
+    Bookmark.create(user_id: current_user.id, post_id: @post.id)
+    redirect_to post_path(@post)
+  end
+
+  def bookmarked?(user)
+    !!Bookmark.where(post_id: id, user_id: user.id).first
+   end
   private
 
   def post_params
