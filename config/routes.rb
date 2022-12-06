@@ -11,13 +11,16 @@ Rails.application.routes.draw do
     patch :vote, on: :member
   end
   resources :posts, only: [:show] do
-  patch :bookmark, on: :member
+    patch :bookmark, on: :member
   end
+  # resources :posts, only: [:show] do
+  #   delete :bookmark, on: :member
+  # end
+
   resources :bookmarks, only: [:index, :destroy]
   resources :users, only: [:show]
   resources :posts, only: [:index, :show, :new, :create, :destroy] do
     resources :comments, only: [:create]
-
   end
 end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -25,4 +28,4 @@ end
   # Defines the root path route ("/")
 
   # root "articles#index"
-    # post "posts", to: "devs#create"
+  # post "posts", to: "devs#create"
