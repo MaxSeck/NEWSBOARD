@@ -8,7 +8,6 @@ class PostsController < ApplicationController
       @posts = Post.where(sql_query, query: "%#{params[:query]}%")
     else
       @posts = Post.all.order('posts.created_at DESC')
-
     end
   end
 
