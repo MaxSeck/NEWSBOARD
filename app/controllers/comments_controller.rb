@@ -1,5 +1,10 @@
 class CommentsController < ApplicationController
 
+  def new
+    @post = Post.find(params[:post_id])
+    @comment = Comment.new
+  end
+
   def create
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
@@ -9,6 +14,7 @@ class CommentsController < ApplicationController
     @comment.save!
     redirect_to request.referrer
   end
+
 
   private
 

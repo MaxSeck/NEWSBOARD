@@ -33,7 +33,7 @@
       </div>
     </div>
 
-    <%= render 'comment-form' %>
+    <%= render partial: 'comment-form', locals: {post: @post, comment: @comment} %>
 
     <div class="comment-card">
       <% @post.comments.reverse.each do |comment| %>

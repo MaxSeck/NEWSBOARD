@@ -1,0 +1,5 @@
+<%= render "remote_modal", title: "Add comment" do %>
+
+  <%= render partial: "posts/comment-form", locals: { post: @post, comment: @comment} %>
+
+<% end %>
