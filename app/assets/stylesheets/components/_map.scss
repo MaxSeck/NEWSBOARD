@@ -1,5 +1,5 @@
 .mapboxgl-popup {
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .mapboxgl-popup-content {
@@ -8,17 +8,17 @@
 }
 
 .mapboxgl-ctrl-top-right {
-  margin-top: 441px;
-  padding-left: 30px;
   width: 398px;
 }
 
 a.mapboxgl-ctrl-logo {
-  margin: 0 0 467px -10px;
+
 }
 
 .mapboxgl-ctrl-geocoder.mapboxgl-ctrl {
-  margin: 0;
+  margin: 10;
 }
 
-
+.input.mapboxgl-ctrl-geocoder--input {
+  
+}
