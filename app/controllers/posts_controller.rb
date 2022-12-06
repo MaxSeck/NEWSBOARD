@@ -4,7 +4,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @users = User.all
     if params[:query].present?
-      sql_query = "description ILIKE :query OR content ILIKE :query OR address ILIKE :query"
+      sql_query = "title ILIKE :query OR content ILIKE :query OR address ILIKE :query"
       @posts = Post.where(sql_query, query: "%#{params[:query]}%")
     else
       @posts = Post.all.order('posts.created_at DESC')
@@ -51,7 +51,8 @@ class PostsController < ApplicationController
 
   def bookmarked?(user)
     !!Bookmark.where(post_id: id, user_id: user.id).first
-  end
+   end
+
 
   private
 
