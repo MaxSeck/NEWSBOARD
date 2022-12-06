@@ -25,7 +25,11 @@
         <p class="show-post-icon-content"><i class="fa-solid fa-comment"><strong></i><%= @post.comments.count %></strong></p>
       </div>
       <div class="d-flex align-items-center">
-        <p class="show-post-icon-content"><i class="fa-solid fa-bookmark"><strong></i><%= @post.bookmarks.count %></strong></p>
+        <%= button_to bookmark_post_path(@post), method: :patch do %>
+
+          <p class="show-post-icon-content"><i class="fa-solid fa-bookmark"><strong></i><%= @post.bookmarks.count %></strong></p>
+          
+        <% end %>
       </div>
     </div>
 
