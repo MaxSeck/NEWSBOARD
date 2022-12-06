@@ -20,14 +20,24 @@
   color: #F2E7D5;
 }
 
-.nav-link {
-  color: #F2E7D5 ;
-}
 
 .navbar-toggler-icon {
-  color: #F7F7F7;
+  color: #F2E7D5;
 }
 
 .nav-link {
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
+  text-align: right;
+  color: #0E0000;
+  font-size: 16px;
+}
+
+.dropdown-item {
+  padding: 0px;
+  margin: 0px;
+  text-align: right;
+  color: #0E0000;
+  font-size: 16px;
+  
 }
