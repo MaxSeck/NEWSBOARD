@@ -14,7 +14,6 @@
       <%= button_to vote_post_path(post), method: :patch, data: {turbo: false} do %>
         <p class="card-content"><i class="fa-solid fa-heart"></i><%= post.votes.count %></p>
       <% end %>
-        <p class="card-content"><i class="fa-solid fa-comment"></i><%= post.comments.count %></p>
       <%= button_to bookmark_post_path(post), method: :patch, data: {turbo: false} do %>
         <p class="card-content"><i class="fa-solid fa-bookmark"></i><%= post.bookmarks.count %></p>
       <% end %>
