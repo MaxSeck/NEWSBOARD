@@ -13,11 +13,27 @@
   </head>
 
   <body>
+    <%= render "/shared/navbar" %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <div class="page-container">
-      <div class="navbar-container"><%= render "shared/navbar" %></div>
-      <%= render "shared/flashes" %>
-      <div class="content-container"><%= yield %></div>
-      <div class="footer-container"><%= render "shared/bottom_nav" %></div>
+      <%= render "/shared/flashes" %>
+      <div class="content-container">
+        <%= yield %>
+        <%= turbo_frame_tag "remote_modal", target: "_top" %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+      </div>
+        <div class="footer-container"><%= render "shared/bottom_nav" %>
+      </div>
     </div>
   </body>
 </html>

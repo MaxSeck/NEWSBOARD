@@ -1,5 +1,5 @@
 <div class="new-form-container post-form">
-  <%= simple_form_for [@post, @comment] do |f|  %>
+  <%= simple_form_for([post, comment]) do |f|  %>
     <%= f.input :content, placeholder: "Your thoughts?", label: false %>
     <%= f.submit "Reply", class: "btn-flat" %>
   <% end %>
