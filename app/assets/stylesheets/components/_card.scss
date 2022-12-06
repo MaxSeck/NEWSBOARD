@@ -17,7 +17,6 @@
 .card-product h2 {
   font-size: 16px;
   font-weight: bold;
-  margin: 0;
 }
 
 .card-product p {
@@ -60,7 +59,14 @@
   -webkit-box-orient: vertical;
   align-items: stretch;
   justify-items: stretch;
+  margin-top: 10px;
+  button{
+    background: none;
+    border: none;
+  }
 }
+
+
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   private
     def set_username
-       self.username = "user-#{SecureRandom.hex(2)}"
+       self.update(username: "user-#{SecureRandom.hex(2)}" )
        self.save!
     end
   has_many :votes, dependent: :destroy
