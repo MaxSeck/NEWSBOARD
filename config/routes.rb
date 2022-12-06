@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "posts/new", to: "posts#new"
 
   resources :posts, only: [:show] do
-    # resources :votes
+    resources :votes
     patch :vote, on: :member
   end
 
