@@ -1,14 +1,25 @@
 <div class="container" style="height: 656px; padding-top: 130px; margin-top: 20px;">
 <%# <h1 style="padding-top: 6px;" class="text-center">Welcome</h1> %>
-
 <div style="width: 100%; height: 500px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 <div class="Homenewsdiv">
+
+<%= form_with url: posts_path, method: :get, class: "d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a post"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
+
+
 <%= link_to posts_path do %>
 <button type="button" class="button" style="margin-left: 130px; margin-bottom: 0px; margin-top: 0px; width: 106px;">News</button>
  <% end %>
+
 </div>
 </div>

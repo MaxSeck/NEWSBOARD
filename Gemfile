@@ -5,6 +5,7 @@ ruby "3.1.2"
 gem "faker"
 gem "geocoder"
 gem "acts_as_votable"
+gem "pg_search"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
