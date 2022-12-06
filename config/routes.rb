@@ -10,16 +10,16 @@ Rails.application.routes.draw do
     # resources :votes
     patch :vote, on: :member
   end
+
   resources :posts, only: [:show] do
     patch :bookmark, on: :member
   end
-  # resources :posts, only: [:show] do
-  #   delete :bookmark, on: :member
-  # end
 
   resources :bookmarks, only: [:index, :destroy]
   resources :users, only: [:show]
   resources :posts, only: [:index, :show, :new, :create, :destroy] do
+
+    resources :comments, only: [:create]
     resources :comments, only: [:create]
   end
 end
