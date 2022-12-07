@@ -231,6 +231,16 @@ post41 = Post.new({ title: "Lunchtime concert happening today?", user: user53450
 post41.save!
 post42 = Post.new({ title: "Witnesses needed! Somebody vandalized my car!!! 😩", user: user305, address: "30 Rue Jean Jaurès, 95470 Fosses, Frankreich", content: "Did anybody see anything? This would really help me with my insurance claim."})
 post42.save!
+file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1670412960/feuerwerk-koeln_imago0062656933_panthermedia-10-verbot_1200x680.horizontal_e8rz6m.jpg")
+post43 = Post.new({ title: "Fireworks before New Year's Eve?!", user: user306, address: "Rudolfplatz 4, 50674 Köln", content: "This is Germany! I don't think you are allowed to do this mid December!"})
+post43.photo.attach(io: file, filename:"photo.pgn", content_type: "image.png")
+post43.save!
+post44 = Post.new({ title: "👀 Pickpockets at Christmas market!", user: user309, address: "Rudolfplatz, 50674 Köln", content: "Be careful! My neighbour got his phone and wallet stolen! Being drunk makes you the perfect target!"})
+post44.save!
+post45 = Post.new({ title: "Do tinfoil hats work for dogs? 🐶", user: user202, address: "Habsburgerring 9-13, 50674 Köln", content: "I accidently left the TV on when I left for work and my dog consumed hours of mainstream media. He gave me the meanest side-eye when I saged him. How can I protect my dog? Will a tinfoil hat prevent him from believing what the Illuminati are trying to make the world believe?"})
+post45.save!
+post46 = Post.new({ title: "Yet another camera crew blocking the street 😤! #petition", user: user99003, address: "Hohenzollernring 1, 50672 Köln", content: "Really?! One of the busiest streets in Cologne is blocked for yet another dumb little TV production. I am sick of it! Let's start a petition to prevent any filming in the city centre. Who's in?"})
+post46.save!
 # for post no.1
 comment1a = Comment.new({ content: "I tried to take my niece to play today and we couldn't! Actually pretty dangerous to let your children play there!", user: user1001, post: post1})
 comment1a.save!
@@ -486,3 +496,81 @@ comment25b = Comment.new({ content: "The address you chose for this post says it
 comment25b.save!
 comment25c = Comment.new({ content: "That street tho", user: user2051, post: post25})
 comment25c.save!
+# for no.43
+comment43h = Comment.new({ content: "The firework started just as I got down on one knee to propose to my boyfriend! It was magic! 🥺", user: user207, post: post43})
+comment43h.save!
+comment43b = Comment.new({ content: "That was cute. I love Fireworks!", user: user209, post: post43})
+comment43b.save!
+comment43a = Comment.new({ content: "OP Karen, unlike you some people actually have a life filled with happy occasions they like to celebrate with fireworks. Get over it.", user: user203, post: post43})
+comment43a.save!
+comment43c = Comment.new({ content: "Fireworks are beautiful. They let everybody partake in your joy!", user: user208, post: post43})
+comment43c.save!
+comment43d = Comment.new({ content: "My dog got really scared 🥺", user: user203, post: post43})
+comment43d.save!
+comment43e = Comment.new({ content: "We gotta do fireworks as long as we can. I think they won't be allowed for NYE!", user: user208, post: post43})
+comment43e.save!
+comment43f = Comment.new({ content: "I am sure they checked the legal situation beforehand.", user: user203, post: post43})
+comment43f.save!
+comment43g = Comment.new({ content: "We gotta do fireworks as long as we can. I think they won't be allowed for NYE!", user: user208, post: post43})
+comment43g.save!
+comment43i = Comment.new({ content: "I only like vegan gluten-free fireworks", user: user2051, post: post43})
+comment43i.save!
+# for no. 44
+comment44a = Comment.new({ content: "I have a spare phone for your neighbour 🤗", user: user30009, post: post44})
+comment44a.save!
+comment44b = Comment.new({ content: "That's why I don't do Christmas markets.", user: user221, post: post44})
+comment44b.save!
+comment44c = Comment.new({ content: "Good for your neighbour! Without a phone, the government has a harder time finding you!", user: user98765, post: post44})
+comment44c.save!
+comment44d = Comment.new({ content: "Hey guys, I became a millionaire within one week just by manifesting my dream life. Follow bitly.com/pyramid_scheme for more info. ❌ don't miss out on this!!!!!!!! ❌", user: user2511, post: post44})
+comment44d.save!
+comment44e = Comment.new({ content: "Hey guys, I became a millionaire within one week just by manifesting my dream life. Follow bitly.com/pyramid_scheme for more info. ❌ don't miss out on this!!!!!!!! ❌", user: user208, post: post44})
+comment44e.save!
+comment44f = Comment.new({ content: "That also happened to my friend 😱", user: user30009, post: post44})
+comment44f.save!
+# for no.45
+comment45h = Comment.new({ content: "This post made me laugh so hard I fell off the toilet 😂😅", user: user66255, post: post45})
+comment45h.save!
+comment45b = Comment.new({ content: "I can't with that picture!", user: user66222, post: post45})
+comment45b.save!
+comment45a = Comment.new({ content: "My dog did the same thing after we listened to french radio. We tried commands in french but he would just barking. Is my dog bilingual?", user: user112, post: post45})
+comment45a.save!
+comment45c = Comment.new({ content: "I don't think your dog should be forced to wear a tinfoil hat because you are crazy!", user: user678, post: post45})
+comment45c.save!
+comment45d = Comment.new({ content: "My dog got really scared when I tried that once 🥺", user: user59366, post: post45})
+comment45d.save!
+comment45e = Comment.new({ content: "Bro, are you high?! 🤪 ", user: user65440, post: post45})
+comment45e.save!
+comment45f = Comment.new({ content: "The government is on to us! Don't post about this here! If they know you know you have to make sure that they don't know you know they know so they think you know something else. This is why I share my knowledge here *cough* 👁🛸🛰", user: user44226, post: post45})
+comment45f.save!
+comment45g = Comment.new({ content: "We don't deserve dogs!", user: user30301, post: post45})
+comment45g.save!
+comment45f = Comment.new({ content: "I think you should apologize to your dog!", user: user29111, post: post45})
+comment45f.save!
+comment45g = Comment.new({ content: "Cute dog!", user: user59366, post: post45})
+comment45g.save!
+# for no.46
+comment46a = Comment.new({ content: "Move away if you don't like it!", user: user23444, post: post46})
+comment46a.save!
+comment46b = Comment.new({ content: "I heard Beyoncé was in that movie!", user: user499, post: post46})
+comment46b.save!
+comment46c = Comment.new({ content: "My brother is part of that camera crew and that movie will be lit!", user: user2508, post: post46})
+comment46c.save!
+comment46d = Comment.new({ content: "This was announced weeks in advance. Open your eyes when you walk the streets. Those announcements are ALWAYS on the street posts.", user: user15233, post: post46})
+comment46d.save!
+comment46e = Comment.new({ content: "Move away if you don't like it!", user: user44226, post: post46})
+comment46e.save!
+comment46f = Comment.new({ content: "No way Beyoncé will be in this movie! 😆", user: user307, post: post46})
+comment46f.save!
+comment46g = Comment.new({ content: "What will the mmovie be about?", user: user29111, post: post46})
+comment46g.save!
+comment46h = Comment.new({ content: "I agree that this was communicated weeks in advance. Get your stuff together.", user: user1001, post: post46})
+comment46h.save!
+comment46i = Comment.new({ content: "Where does this Beyoncé idea come from?", user: user23444, post: post46})
+comment46i.save!
+comment46j = Comment.new({ content: "No, I heard that Aquachad will be in the movie!", user: user66213, post: post46})
+comment46j.save!
+comment46k = Comment.new({ content: "Aquachad?! 😍👅🧜🏽‍♂️", user: user98765, post: post46})
+comment46k.save!
+comment46l = Comment.new({ content: "Aquachad ❤️", user: user99003, post: post46})
+comment46l.save!
