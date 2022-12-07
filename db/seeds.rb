@@ -237,7 +237,9 @@ post43.photo.attach(io: file, filename:"photo.pgn", content_type: "image.png")
 post43.save!
 post44 = Post.new({ title: "👀 Pickpockets at Christmas market!", user: user309, address: "Rudolfplatz, 50674 Köln", content: "Be careful! My neighbour got his phone and wallet stolen! Being drunk makes you the perfect target!"})
 post44.save!
+file= URI.open("https://i.pinimg.com/originals/1f/42/29/1f4229a066cd0b9438a71f9c228cf309.jpg")
 post45 = Post.new({ title: "Do tinfoil hats work for dogs? 🐶", user: user202, address: "Habsburgerring 9-13, 50674 Köln", content: "I accidently left the TV on when I left for work and my dog consumed hours of mainstream media. He gave me the meanest side-eye when I saged him. How can I protect my dog? Will a tinfoil hat prevent him from believing what the Illuminati are trying to make the world believe?"})
+post45.photo.attach(io: file, filename:"photo.pgn", content_type: "image.png")
 post45.save!
 post46 = Post.new({ title: "Yet another camera crew blocking the street 😤! #petition", user: user99003, address: "Hohenzollernring 1, 50672 Köln", content: "Really?! One of the busiest streets in Cologne is blocked for yet another dumb little TV production. I am sick of it! Let's start a petition to prevent any filming in the city centre. Who's in?"})
 post46.save!
