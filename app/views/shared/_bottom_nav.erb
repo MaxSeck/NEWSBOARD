@@ -1,18 +1,19 @@
 <div class="d-flex justify-content-around fixed-bottom" style="padding-top: 20px;padding-bottom:
     20px; background-color: #6D9886">
 
-      <%= link_to bookmarks_path do %>
-        <%= image_tag "bookmark.jpg", style: 'height:40px; width:40px;'%>
-      <% end %>
 
-      <%= link_to new_post_path do %>
-        <%= image_tag "add.jpg", style: 'height:40px; width: 40px;' %>
-      <% end %>
+    <%= link_to bookmarks_path do %>
+      <%= image_tag "bookmark.jpg", style: 'height:30px; width:30px;'%>
+    <% end %>
 
-      <% if user_signed_in? %>
-        <%= link_to user_path(current_user) do %>
-          <%= image_tag "profile.jpg", style: 'height:40px; width:40px;' %>
-        <% end %>
-      <% end %>
+    <%= link_to new_post_path do %>
+      <%= image_tag "add.jpg", style: 'height:30px; width:30px;' %>
+    <% end %>
 
+    <% if user_signed_in? %>
+      <%= link_to user_path(current_user) do %>
+        <%= image_tag "profile.jpg", style: 'height:30px; width:30px;' %>
+
+      <% end %>
+    <% end %>
 </div>
