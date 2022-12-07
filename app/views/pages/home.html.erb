@@ -5,7 +5,7 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
-<div class="Homenewsdiv">
+<div class="Homenewsdiv" style="margin-top: 10px;">
 
 <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
@@ -13,13 +13,15 @@
     class: "form-control",
     placeholder: "Find a post"
   %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+  <div style="position: absolute; margin-top: 40px; margin-left: 130px; border: solid; background: #6D9886; margin-top: 50px;">
+  <%= submit_tag "Search", class: "btn btn-search" %>
+  </div>
 <% end %>
 
 
-<%= link_to posts_path do %>
-  <button type="button" class="button" style="margin-bottom: 0px;margin-left: 130px;margin-top: 30px;width: 106px;">Checkout Your Area</button>
-<% end %>
+<%# <%= link_to posts_path do %>
+  <%# <button type="button" class="button" style="margin-bottom: 0px;margin-left: 130px;margin-top: 30px;width: 106px;">Checkout Your Area</button> %>
+<%# <% end %>
 
 </div>
 </div>
