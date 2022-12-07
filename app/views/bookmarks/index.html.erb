@@ -1,8 +1,7 @@
-<div>
-<br>
-<br>
-<br>
-<br>
+<div class="container">
+  <div class="header-container">
+    <h1 class="header-h1"><strong>Your Bookmarks</strong></h1>
+  </div>
 
 <% @posts.each do |post|%>
 <%= render partial: "posts/post-card", locals: {post: post} %>
