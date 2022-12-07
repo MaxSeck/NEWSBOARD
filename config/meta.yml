@@ -1,0 +1,4 @@
+meta_product_name: "AroundAbout"
+meta_title: "AroundAbout"
+meta_description: "Your Neighbourhood Newsboard"
+meta_image: "logo.jpg" # should exist in `app/assets/images/`
