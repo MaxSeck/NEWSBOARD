@@ -49,7 +49,88 @@ user678 = User.new({ email: "user678@gmail.com", password: "password", username:
 user678.save!
 user222 = User.new({ email: "user222@gmail.com", password: "password", username: "user222"})
 user222.save!
-
+user223 = User.new({ email: "user223@gmail.com", password: "password", username: "user223"})
+user223.save!
+user30301 = User.new({ email: "user30301@gmail.com", password: "password", username: "user30301"})
+user30301.save!
+user59343 = User.new({ email: "user59343@gmail.com", password: "password", username: "user59343"})
+user59343.save!
+user59344 = User.new({ email: "user59344@gmail.com", password: "password", username: "user59344"})
+user59344.save!
+user59345 = User.new({ email: "user59345@gmail.com", password: "password", username: "user59345"})
+user59345.save!
+user59446 = User.new({ email: "user59446@gmail.com", password: "password", username: "user59446"})
+user59446.save!
+user60696 = User.new({ email: "user60696@gmail.com", password: "password", username: "user60696"})
+user60696.save!
+user31234 = User.new({ email: "user31234@gmail.com", password: "password", username: "user31234"})
+user31234.save!
+user59366 = User.new({ email: "user59366@gmail.com", password: "password", username: "user59366"})
+user59366.save!
+user23444 = User.new({ email: "user23444@gmail.com", password: "password", username: "user23444"})
+user23444.save!
+user31111 = User.new({ email: "user31111@gmail.com", password: "password", username: "user31111"})
+user31111.save!
+user98765 = User.new({ email: "user98765@gmail.com", password: "password", username: "user98765"})
+user98765.save!
+user53450 = User.new({ email: "user53450@gmail.com", password: "password", username: "user53450"})
+user53450.save!
+user44226 = User.new({ email: "user44226@gmail.com", password: "password", username: "user44226"})
+user44226.save!
+user30009 = User.new({ email: "user30009@gmail.com", password: "password", username: "user30009"})
+user30009.save!
+user19456 = User.new({ email: "user19456@gmail.com", password: "password", username: "user19456"})
+user19456.save!
+user15233 = User.new({ email: "user15233@gmail.com", password: "password", username: "user15233"})
+user15233.save!
+user23222 = User.new({ email: "user23222@gmail.com", password: "password", username: "user23222"})
+user23222.save!
+user32777 = User.new({ email: "user32777@gmail.com", password: "password", username: "user32777"})
+user32777.save!
+user99003 = User.new({ email: "user99003@gmail.com", password: "password", username: "user99003"})
+user99003.save!
+user29111 = User.new({ email: "user29111@gmail.com", password: "password", username: "user29111"})
+user29111.save!
+user66213 = User.new({ email: "user66213@gmail.com", password: "password", username: "user66213"})
+user66213.save!
+user66255 = User.new({ email: "user66255@gmail.com", password: "password", username: "user66255"})
+user66255.save!
+user66222 = User.new({ email: "user66222@gmail.com", password: "password", username: "user66222"})
+user66222.save!
+user32733 = User.new({ email: "user32733@gmail.com", password: "password", username: "user32733"})
+user32733.save!
+user65440 = User.new({ email: "user65440@gmail.com", password: "password", username: "user65440"})
+user65440.save!
+user63333 = User.new({ email: "user63333@gmail.com", password: "password", username: "user63333"})
+user63333.save!
+user221 = User.new({ email: "user221@gmail.com", password: "password", username: "user221"})
+user221.save!
+user202 = User.new({ email: "user202@gmail.com", password: "password", username: "user202"})
+user202.save!
+user203 = User.new({ email: "user203@gmail.com", password: "password", username: "user203"})
+user203.save!
+user204 = User.new({ email: "user204@gmail.com", password: "password", username: "user204"})
+user204.save!
+user205 = User.new({ email: "user205@gmail.com", password: "password", username: "user205"})
+user205.save!
+user206 = User.new({ email: "user206@gmail.com", password: "password", username: "user206"})
+user206.save!
+user207 = User.new({ email: "user207@gmail.com", password: "password", username: "user207"})
+user207.save!
+user208 = User.new({ email: "user208@gmail.com", password: "password", username: "user208"})
+user208.save!
+user209 = User.new({ email: "user209@gmail.com", password: "password", username: "user209"})
+user209.save!
+user305 = User.new({ email: "user305@gmail.com", password: "password", username: "user305"})
+user305.save!
+user306 = User.new({ email: "user306@gmail.com", password: "password", username: "user306"})
+user306.save!
+user307 = User.new({ email: "user307@gmail.com", password: "password", username: "user307"})
+user307.save!
+user308 = User.new({ email: "user308@gmail.com", password: "password", username: "user308"})
+user308.save!
+user309 = User.new({ email: "user309@gmail.com", password: "password", username: "user309"})
+user309.save!
 puts "Creating posts..."
 
 file = URI.open("https://res.cloudinary.com/dq0qyhr3b/image/upload/v1669729385/Newsboard/broken_mhhndo.png")
@@ -83,8 +164,73 @@ post9.photo.attach(io: file, filename:"photo.pgn", content_type: "image.png")
 post9.save!
 post10 = Post.new({ title: "Keys found 🔑", user: user2589, address: "Hohenzollernring 26, Köln", content: "I found a key with a bright pink zipper lanyard in front of REWE. I dropped it off at the city lost and found."})
 post10.save!
-
-puts "Creating comments..."
+post11 = Post.new({ title: "Movie Review?", user: user223, address: "7 de Julio, 15390 Meixco City, CDMX, Mexico", content: "Has anybody seen the new Super Mario Movie?"})
+post11.save!
+post12 = Post.new({ title: "Visitor from Cologne, Germany", user: user33, address: "Blvd. Miguel de Cervantes Saavedra, Granada, Miguel Hidalgo, 11529 México City, CDMX, Mexico", content: "Hello, I am on a one week business trip hoping to see a bit of Mexico City. Do you guys have any recommendations? What are the must-sees, trendy areas and best restaurants in town?"})
+post12.save!
+post13 = Post.new({ title: "Free walking tours", user: user23222, address: "Berlín 268, Del Carmen, Coyoacán, 04100 Mexico City, CDMX, Mexico", content: "We meet in front of Hostal Cuija Coyoacan at 10 am."})
+post13.save!
+post14 = Post.new({ title: "Gun lost at wedding!", user: user66213, address: "1111 Parrot Jungle Trail, Miami, FL 33132, USA", content: "My cousin got married to his pet crocodile and ever since I cannot find my gun. It is yellow with glitter and I think there were some bullets. I really need it back, it was a farewell gift before my baby daddy went to prison."})
+post14.save!
+post15 = Post.new({ title: "Any expats around?", user: user66222, address: "602 NW 136th Ave, Miami, FL 33182, USA", content: "Miami gets really lonely from time to time. Does anybody know of an expat meetup or something like that? Preferably for European Entrepreneurs?"})
+post15.save!
+post16 = Post.new({ title: "Beerpong tournament", user: user32777, address: "Columbiastraat 8, 2030 Antwerpen, Belgien", content: "A group of 10 students, chill vibe. Aged 18 - 26. Come join us. BYOB!!!!"})
+post16.save!
+post17 = Post.new({ title: "Trash in front of elementary school!!", user: user98765, address: "Lindenlei 27, 2900 Schoten, Belgien", content: "Some rowdy teenagers have been trashing the entire pickup area in front of an elementary school. I wouldn't be surprised if the drank beer! We need to stop this."})
+post17.save!
+post18 = Post.new({ title: "Free oil change!", user: user15233, address: "R. Marina, 350 - Bento Ribeiro, Rio de Janeiro - RJ, 21331-070, Brasil", content: "My uncle's repair shop does a promo event and Saturday! They offer free oil changes!"})
+post18.save!
+post19 = Post.new({ title: "Dadi freyr concert!!!", user: user15233, address: "Reykjavik, Iceland", content: "Bring your friends and enjoy an evening with great music!"})
+post19.save!
+post20 = Post.new({ title: "Police action at Oude Vrouwekerk", user: user2051, address: "Onze Lieve Vrouweplein 7, 6211 HD Maastricht, Niederlande", content: "What's going on here? I saw like 12 police cars"})
+post20.save!
+post21 = Post.new({ title: "Navy Pigeon?!", user: user15233, address: "Oosterweg 74, 9724 CK Groningen, Niederlande", content: "I saw a little pigeon with a navy uniform? It even had a little whistle and seemed very angry when I came closer. I must have interupted a drill or sth. Does anybody know about this?"})
+post21.save!
+post22 = Post.new({ title: "Why is Düsseldorf so much better than Cologne?", user: user44226, address: "Königsallee 22, Düsseldorf", content: "I don't get it. Why do Düsseldorfers keep saying that? So far, I cannot really agree."})
+post22.save!
+post23 = Post.new({ title: "Super annoying driver", user: user59446, address: "14 Rue Paul Janet, 67000 Strasbourg, Frankreich", content: "We get it. You have a nice car. No need to start your engine like this."})
+post23.save!
+post24 = Post.new({ title: "Clean up after your dog!", user: user66255, address: "Schanzenstraße 24, Köln", content: "The poop bags are free! Just clean it up!"})
+post24.save!
+###
+post25 = Post.new({ title: "I love Frankfurt", user: user2051, address: "Kaiserstraße 26, Frankfurt", content: "I love Frankfurt. It is the best city in the world."})
+post25.save!
+post26 = Post.new({ title: "Tickets to the Party Boat", user: user202, address: "Am Zollhafen 3-5, 55118 Mainz", content: "My friend and I would like to go. Anybody any tickets left?"})
+post26.save!
+post27 = Post.new({ title: "Free Coffee Machine", user: user205, address: "Martinstraße 65, 57462 Olpe", content: "It works fine, I am just downsizing for my tiny house :)"})
+post27.save!
+post28 = Post.new({ title: "Street Cleanup", user: user222, address: "69007 Lyon, Frankreich", content: "This area really needs a good cleanup. Let's all meet to pick up some trash, talk and enjoy the night in great company."})
+post28.save!
+post29 = Post.new({ title: "Dance mob at 6 pm", user: user66255, address: "Stadsweide 2, 6041 TD Roermond, Niederlande", content: "We are raising awareness for MS. Help us and learn some dance moves!"})
+post29.save!
+###
+post30 = Post.new({ title: "Donation drive for winter coats", user: user208, address: "Markt 2, 5911 HD Venlo, Niederlande", content: "With winter coming, I thought it would be a great idea to collect warm winter coats to give to the homeless. I will be at in front of the station entrance with a big orange sign."})
+post30.save!
+post31 = Post.new({ title: "Be part of my TikTok-Video", user: user30009, address: "Krakaustraße 1, 52064 Aachen", content: "Come wearing all yellow and become famous!"})
+post31.save!
+post32 = Post.new({ title: "Free Washing Machine", user: user204, address: "Rue de Liège 145, 4721 Kelmis, Belgien", content: "Outside of the park, just pick it up"})
+post32.save!
+post33 = Post.new({ title: "Street Cleanup", user: user209, address: "Aachener Straße 160, 4730 Raeren, Belgien", content: "Let's beat the rivaling neighbour hood!!!!"})
+post33.save!
+post34 = Post.new({ title: "Crazy lady throwing cotton bolls at people", user: user98765, address: "4 Rue Pierre de Coubertin, 1358 Luxembourg, Luxemburg", content: "Is this an art project?"})
+post34.save!
+####
+post35 = Post.new({ title: "Fire near Bus Station! 🔥", user: user223, address: "Kolmá 802, 360 01 Karlovy Vary, Czeck Republic", content: "Please take care of yourself! Keep the windows closed!"})
+post35.save!
+post36 = Post.new({ title: "Lost kitten found in the park", user: user306, address: "Antoniusstraße, 98693 Ilmenau", content: "It looks so sad. Please help me find the mama cat!"})
+post36.save!
+post37 = Post.new({ title: "Dish Washer needed!!!!!!", user: user309, address: "Pelikanpl. 31, 30177 Hannover", content: "My dishwasher broke. Let me know, if you have a spare! I will pick it up today!!!!!!!!!111!!!"})
+post37.save!
+post38 = Post.new({ title: "Anybody are for a Street Cleanup?", user: user3011, address: "17 Mallin St, Ferrybank South, Wexford, Y35 ED90, Irland", content: "Let's do some cleaning so we get more Tourists!!"})
+post38.save!
+post39 = Post.new({ title: "Does anybody where I can find gluten-free groceries?", user: user206, address: "Aylesham Centre, Rye Ln, London SE15 5EW, UK", content: "It is so hard to find good gluten-free food."})
+post39.save!
+post40 = Post.new({ title: "Any tips for a Bakery? In need of good croissants 🥐", user: user31111, address: "2 Bis Rue Mercœur, 75011 Paris, Frankreich", content: "Looking forward to your recommendations!"})
+post40.save!
+post41 = Post.new({ title: "Lunchtime concert happening today?", user: user53450, address: "15 Rue Robert Peltier, 95190 Goussainville, Frankreich", content: "Does anybody know if the concert is taking place today? The FB post was super cryptic!"})
+post41.save!
+post42 = Post.new({ title: "Witnesses needed! Somebody vandalized my car!!! 😩", user: user305, address: "30 Rue Jean Jaurès, 95470 Fosses, Frankreich", content: "Did anybody see anything? This would really help me with my insurance claim."})
+post42.save!
 # for post no.1
 comment1a = Comment.new({ content: "I tried to take my niece to play today and we couldn't! Actually pretty dangerous to let your children play there!", user: user1001, post: post1})
 comment1a.save!
@@ -227,3 +373,116 @@ comment9h.save!
 # for no.10
 comment10a = Comment.new({ content: "Thank you! I picked them up today 👩🏼‍💻", user: user991, post: post10})
 comment10a.save!
+# for no.11
+comment11a = Comment.new({ content: "I wanna goooooo! It's - a - me! Mariam's Brother 😈!!!", user: user23444, post: post11})
+comment11a.save!
+comment11b = Comment.new({ content: "The trailer looks trashy!", user: user59345, post: post11})
+comment11b.save!
+comment11c = Comment.new({ content: "Luckily this is not a Netflix production...", user: user31234, post: post11})
+comment11c.save!
+comment11d = Comment.new({ content: "kids nowadays don't even know who the Super Mario Bros. are... ☠️", user: user23444, post: post11})
+comment11d.save!
+comment11e = Comment.new({ content: "🍕❤️‍🔥", user: user53450, post: post11})
+comment11e.save!
+# for no.12
+comment12a = Comment.new({ content: "Streetfood!!!!", user: user23444, post: post12})
+comment12a.save!
+comment12b = Comment.new({ content: "I prefer the small taco stand right in front of Museo Franz Meyer", user: user59345, post: post12})
+comment12b.save!
+comment12c = Comment.new({ content: "Great, thank you. So streetfood over restaurants? What about instagrammable restaurants?", user: user33, post: post12})
+comment12c.save!
+comment12d = Comment.new({ content: "This 2022, nobody is on IG anymore 📴", user: user59345, post: post12})
+comment12d.save!
+comment12e = Comment.new({ content: "El 123, it is a Thai place", user: user59446, post: post12})
+comment12e.save!
+comment12f = Comment.new({ content: "A bit outside, but worth the trip is Rincón Helado at Calle 3 de Mayo, Calle Reforma in 520444. It is a icecream shop.", user: user222, post: post12})
+comment12f.save!
+# for no.13
+comment13a = Comment.new({ content: "Count me in! I will bring a friend!", user: user15233, post: post13})
+comment13a.save!
+comment13b = Comment.new({ content: "Will there be girls?", user: user2051, post: post13})
+comment13b.save!
+comment13c = Comment.new({ content: "What about beer? Anybody giving out beer?", user: user19456, post: post13})
+comment13c.save!
+comment13d = Comment.new({ content: "My BF and I will be joining! We cannot wait! Thanks for offering this :)", user: user30301, post: post13})
+comment13d.save!
+# for no.14
+comment14a = Comment.new({ content: "Obv a troll! ☠️", user: user15233, post: post14})
+comment14a.save!
+comment14b = Comment.new({ content: "Get outta here! That never happened! 😹", user: user60696, post: post14})
+comment14b.save!
+comment14c = Comment.new({ content: "I mean.... we are in Florida. Anything is possible.", user: user66222, post: post14})
+comment14c.save!
+comment14d = Comment.new({ content: "This will hit the internet in 3, 2, 1...", user: user30301, post: post14})
+comment14d.save!
+comment14e = Comment.new({ content: "I found it and handed it over the authorities!!! 🤠", user: user59366, post: post14})
+comment14e.save!
+comment14f = Comment.new({ content: "Just another day in Florida...", user: user29111, post: post14})
+comment14f.save!
+# for no.15
+comment15a = Comment.new({ content: "French Finance Expert here, I would like to join!", user: user44226, post: post15})
+comment15a.save!
+comment15b = Comment.new({ content: "There is a monthly meetup at Novikov Miami in Downtown. We meet on the first Tuesday of every month. We do require a minimum purchase of $ 40.", user: user60696, post: post15})
+comment15b.save!
+comment15c = Comment.new({ content: "Cool, there is also a German Restaurant that holds biweekly Beer Tastings. Checkout Wunderbar Sports Bar & Grill. Mostly Germans attend, but also peopple from other nations.", user: user66222, post: post15})
+comment15c.save!
+comment15d = Comment.new({ content: "I would love to join!", user: user30301, post: post15})
+comment15d.save!
+comment15e = Comment.new({ content: "Can I join? I am a Polish musician who just got married to an American.", user: user3011, post: post15})
+comment15e.save!
+# for no.16
+comment16a = Comment.new({ content: "Cool! What time?!", user: user15233, post: post16})
+comment16a.save!
+comment16b = Comment.new({ content: "All day everyday! Just come by whenever you feel like it.", user: user32777, post: post16})
+comment16b.save!
+# for no.17
+comment17a = Comment.new({ content: "Let them enjoy the weather! What a Karen move 🤮", user: user44226, post: post15})
+comment17a.save!
+comment17b = Comment.new({ content: "This again... My son told me that some grumpy old lady has been screaming at them and accusing them of trashing up the whole place. They are there to play ping pong. Seriously... get a life!", user: user222, post: post15})
+comment17b.save!
+comment17c = Comment.new({ content: "Stop harassing our children! They were locked in with the pandemic. Enough is enough! If you harass my child one more time, I will report you!", user: user66222, post: post15})
+comment17c.save!
+comment17d = Comment.new({ content: "My little brother came home crying because this crazy lady took away his ping pong bat. That was his birthday present. We need to stop this lady. She poses a real threat to children.", user: user222, post: post15})
+comment17d.save!
+comment17e = Comment.new({ content: "This is getting way out of hand. @old lady; just let the kids live. @parents: Teach your children to be respectful of the environment - just in case.", user: user99003, post: post15})
+comment17e.save!
+# for no.20
+comment20a = Comment.new({ content: "They are not real, they are filming for a movie :)", user: user23444, post: post20})
+comment20a.save!
+comment20b = Comment.new({ content: "All fake, it's a for a movie!!!", user: user59446, post: post20})
+comment20b.save!
+# for no.21
+comment21a = Comment.new({ content: "That was Lt. Pietje van Bloemen, a real legend!", user: user23444, post: post21})
+comment21a.save!
+comment21b = Comment.new({ content: "It's best to leave him alone when he is working. He is saving our country from climate change!!", user: user44226, post: post21})
+comment21b.save!
+comment21c = Comment.new({ content: "I once offered him a piece of Frikandel and he got so mad he sent his troop after me", user: user44226, post: post21})
+comment21c.save!
+comment21d = Comment.new({ content: "haha, classic Pietje!", user: user15233, post: post21})
+comment21d.save!
+# for no.22
+comment22a = Comment.new({ content: "LIES!!!! Cologne is the best city in the entire world!!!!", user: user23444, post: post22})
+comment22a.save!
+comment22b = Comment.new({ content: "Clearly, they have been brainwashed. Nobody in their right mind would think that!", user: user30009, post: post22})
+comment22b.save!
+comment22c = Comment.new({ content: "This war has been going on for ages. Both cities suck. Frankfurt is the best city in Germany!", user: user2589, post: post22})
+comment22c.save!
+comment22d = Comment.new({ content: "#köllealaafyou #köllefornia #kölle", user: user30009, post: post22})
+comment22d.save!
+comment22e = Comment.new({ content: "I think people perfer Düsseldorf because it is very clean", user: user221, post: post22})
+comment22e.save!
+comment22f = Comment.new({ content: "Düsseldorf is home of Die Toten Hosen!", user: user32733, post: post22})
+comment22f.save!
+comment22g = Comment.new({ content: "The fashion!", user: user499, post: post22})
+comment22g.save!
+comment22h = Comment.new({ content: "Come on, everybody prefers the city that feels like home. There is no better city.", user: user66222, post: post22})
+comment22h.save!
+comment22i = Comment.new({ content: "I moved from CGN to DD and my heart never fully recovered.", user: user59343, post: post22})
+comment22i.save!
+# for no.25
+comment25a = Comment.new({ content: "Wait until you find about Munich....", user: user202, post: post25})
+comment25a.save!
+comment25b = Comment.new({ content: "The address you chose for this post says it all 😂!", user: user99003, post: post25})
+comment25b.save!
+comment25c = Comment.new({ content: "That street tho", user: user2051, post: post25})
+comment25c.save!

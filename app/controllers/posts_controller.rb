@@ -9,6 +9,14 @@ class PostsController < ApplicationController
     else
       @posts = Post.all.order('posts.created_at DESC')
     end
+    @markers = @posts.geocoded.map do |post|
+      {
+        lat: post.latitude,
+        lng: post.longitude,
+        info_window: render_to_string(partial: "pages/info_window", locals: {post: post })
+        # image_url: helpers.asset_url("REPLACE_THIS_WITH_YOUR_IMAGE_IN_ASSETS")
+      }
+    end
   end
 
   def new
