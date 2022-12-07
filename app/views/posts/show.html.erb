@@ -33,8 +33,8 @@
     <hr>
     <%= render partial: 'comment-form', locals: {post: @post, comment: @comment} %>
 
-    <div class="comment-card">
-      <% @post.comments.reverse.each do |comment| %>
+    <% @post.comments.reverse.each do |comment| %>
+      <div class="comment-card">
         <div class="d-flex justify-space-between w-100">
           <p class="flex-grow-1"><%= comment.created_at.strftime("%m-%e-%y %H:%M") %></p>
           <p><strong><%= comment.user.username %></strong></p>

@@ -58,7 +58,7 @@ class PostsController < ApplicationController
 
   def bookmarked?(user)
     !!Bookmark.where(post_id: id, user_id: user.id).first
-   end
+  end
 
 
   private
