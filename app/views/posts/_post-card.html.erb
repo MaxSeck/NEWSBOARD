@@ -10,14 +10,14 @@
       <p class="card-content line-clamp"><%= post.content%></p>
     <% end %>
     <div class="card-content-container">
-      <%= button_to vote_post_path(post), method: :patch, data: {turbo: false} do %>
-        <p class="card-content"><i class="fa-solid fa-heart"></i><%= post.votes.count %></p>
-      <% end %>
-      <%= button_to bookmark_post_path(post), method: :patch, data: {turbo: false} do %>
-        <p class="card-content"><i class="fa-solid fa-bookmark"></i><%= post.bookmarks.count %></p>
+        <%= button_to vote_post_path(post), method: :patch, data: {turbo: false} do %>
+          <p class="card-content"><i class="fa-solid fa-heart"></i><%= post.votes.count %></p>
       <% end %>
         <%= link_to new_post_comment_path(post), data: { turbo_frame: "remote_modal" } do %>
           <p class="card-content"><i class="fa-solid fa-comment" ></i><%= post.comments.count %></p>
+      <% end %>
+        <%= button_to bookmark_post_path(post), method: :patch, data: {turbo: false} do %>
+          <p class="card-content"><i class="fa-solid fa-bookmark"></i><%= post.bookmarks.count %></p>
         <% end %>
     </div>
   </div>
