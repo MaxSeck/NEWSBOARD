@@ -29,7 +29,25 @@ color:  #f7f7f7;
   background-color: #6d9886;
   border-radius: 5px;
   width: 50%;
+}
+button .btn .btn-block:focus  {
+  font-size: x-large;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 10x;
+  background-color: #6d9886;
+  border-radius: 5px;
+  width: 50%;
+}
 
+button .btn .btn-block:active  {
+  font-size: x-large;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 10x;
+  background-color: #6d9886;
+  border-radius: 5px;
+  width: 50%;
 }
 
 .fa-paper-plane-o{
